@@ -54,6 +54,11 @@ body{
     padding-left: 20px;
     
 }
+#text p img{
+   height="15px;
+   width=15%;
+}
+     
 #butt{
    height:70px;
    background-color: chartreuse;
