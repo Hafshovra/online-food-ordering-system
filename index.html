@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>online restaurant food ordering system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+
+           var modal = document.getElementById('log');
+           window.onclick = function(event) {
+              if (event.target === modal) {
+                  modal.style.display = "none";
+              }
+           };
+           function validateForm(){
+               var getname = document.getElementsById("name");
+               var getcontact = document.getElementsById("contact");
+               if(getname==="")
+               {
+                   alert("please enter your name");
+               }
+               if(getcontact==="")
+               {
+                   alert("please enter your contact no.");
+               }
+               
+           }
+           
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu_wrapper">
+                <div id="logo">
+                    <a href=""><img title="logo" src="restaurant.png" alt="uni-logo" height="70px"></a>
+                   
+                </div>         
+                <div id="text">       
+                    <p>Need help ordering <br><span style="color: red;">Call <img src="phone-icon.png" alt="" height="15px width=15%"> 00000000000</span></p>
+                </div>
+                <div id="butt">
+                    
+                    <button onclick="document.getElementById('log').style.display='block'" style="width:auto; height:35px;">Login/SignUp</button>
+
+                    <div id="log" class="modal">
+                        <span onclick="document.getElementById('log').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <form class="modal-content" action="index.html" onsubmit="return validateForm()" method="post">
+                                <div class="container">
+                                    <h1>Sign Up</h1>
+                                    <p style="color: red;">Please fill in this form to create an account.</p>
+                                    <hr>
+                                    <label for="psw"><b>Name</b></label><br>
+                                    <input type="text" id="name" placeholder="Enter Name" name="name" required><br>
+                                    
+                                    <label for="psw"><b>Contact No</b></label><br>
+                                    <input type="text" id="contact" placeholder="Enter Contact No" name="contact" required><br>
+                                    
+                                    <label for="psw"><b>Address</b></label><br>
+                                    <input type="text" placeholder="Enter your address" name="name" required><br>
+                                    
+                                    <label for="psw"><b>Email</b></label><br>
+                                    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+                                    <label for="psw"><b>Password</b></label><br>
+                                    <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+                                    <label for="psw-repeat"><b>Confirm Password</b></label><br>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+      
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                                    </label><br>
+                
+                                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                                <div class="clearfix">
+                                    <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn" style="border-radius: 0px; width: 50%;">Cancel</button>
+                                    <button type="submit" class="signupbtn" style=" width: 49.7%;height: 43px; padding-left: 4px; margin-left: 0.3%; border-radius: 0px; ">Sign Up</button>
+                                    <p style="padding: 10px;">Already an account? <a href="" style="text-decoration: none; color: blue;">LogIn</a></p>
+                                </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                </div>
+                 
+                
+            </div>
+            <div id="nav">
+                
+                <button class="btn"><i class="fa fa-home"></i> Home</button>
+                <button class="btn"><i class="fa fa-bars"></i> Menu</button>
+                <button class="btn">AboutUs</button>
+                <button class="btn">ContactUs</button>
+                <button class="btn">LogOut</button>
+                
+                
+                
+            </div>
+            <div id="slider">
+                
+                <p style="font-size:5vw;"><b>Order Online Your Favorite<br> food or booking table</b></p>
+                <div id="slide_content" style=" align-content: center; background-color: white; border-radius: 4px; width:50%;height: auto; margin-left: 50px;">
+                    
+                    <select class="center" style="font-size:2vw; margin-top: 3%; font-size: 20px; width:40%; padding-top: 10px; padding-left: 20px; float: left; margin-left:3px;">
+                        <option style="">select your city</option>
+                        <option>Dhaka</option>
+                        <option>chittagong</option>
+                        <option>sylet</option>
+                    </select>
+                    <select class="center" style="position: relative; font-size:2vw; margin-top: 3%; font-size: 20px;padding-top: 10px; width:40%; padding-right: 0px; float: right; margin-left:3px;">
+                        <option style="font-size:2vw;">Area</option>
+                        <option>Dhaka</option>
+                        <option>chittagong</option>
+                        <option>sylet</option>
+                    </select><br>
+                    <div class="clearfix">
+                        <button  type="button" style=" border-radius: 5px; align-content: center; padding-right: 20px; border: none; float:left;margin-left: 10px; margin-bottom: 2px; background-color: green; width: 20%; height: 35px; cursor: pointer; margin-top: 0.7%;">Start</button>
+                    </div>    
+                </div>
+                
+                
+            </div>
+            <div class=fo id="footer">
+                    <h3 class="icon">We support the following payment methods</h3>
+                    <img src="payment-1.png" alt="">
+                    <img src="payment-3.png" alt="">
+                    
+                <div id="fot_content">
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Join Us</a></li>
+                        <li><a href="">Terms of use</a></li>
+                        <li><a href="">Customer Support</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Be A Rider</a></li>
+                    </ul><br>
+                    
+                    <p style=" float: left; text-align: center;">©All Rights Reserved. Design & Developed By hafsha nigar</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>
